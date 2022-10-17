@@ -1,0 +1,174 @@
+/* ---------------------fonts------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@200;400;600&display=swap');
+/* ---------------------VAR------------------------ */
+:root{
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish_Blue: hsl(229, 6%, 66%);
+--Very_Light_Gray: hsl(0, 0%, 98%);
+--Poppins: 'Poppins', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: solid 1px red; */
+}
+
+body{
+    font-family: var(--Poppins);
+   background-color: var(--Very_Light_Gray);
+}
+/* ---------------------ALL-------------------------- */
+.main{
+   height: 14.5rem;
+   width: 19rem;
+   margin: 4rem auto 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.main__title{
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+.main__subtitle{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.main__text{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--Grayish_Blue);
+    margin-top: .5rem;
+    text-align: center;
+}
+.grid{
+    width: 19rem;
+    margin: 0rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grid_columns{
+    position: relative;
+    height: 14rem;
+    width: 100%;
+    font-size: .8rem;
+    padding: 2rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border: solid 1px;
+    border-color: var(--Grayish_Blue);
+    box-shadow: 0 5px 5px 5px var(--Very-Dark-Blue);
+}
+.grid__columns__description{
+    color: var(--Grayish_Blue);
+    margin-top: .5rem;
+}
+.colorUno{
+    border-top: solid 5px var(--Blue);
+}
+.colorDos{
+    border-top: solid 5px var(--Red);
+}
+.colorTres{
+    border-top: solid 5px var(--Orange);
+}
+.colorCuatro{
+    border-top: solid 5px var(--Cyan);
+}
+.grid__columns__icon{
+    width:4rem ;
+    height:4rem ;
+    position: absolute;
+    left: 12rem;
+    margin-top: .5rem;
+}
+/* ---------------------footer------------------------ */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(min-width:650px){
+    .main{
+        width: 36rem;
+        }
+    .grid{
+        width: 34rem;
+        margin: 0rem auto 0 auto;}
+    .grid_columns{
+        height: 20rem;
+        font-size: 1.4rem;
+        }
+    .grid__columns__icon{
+        width:5rem ;
+        height:5rem ;
+        left: 24rem;  
+    }    
+    .main__title{
+        font-size: 2.5rem;
+    }
+    .main__subtitle{
+        font-size: 2.5rem;
+    }
+    .main__text{
+        font-size: 1rem;
+    } 
+}
+
+@media(min-width:1150px){
+    .main{
+        height: 8rem;
+        width: 70rem;
+        margin-top: 1rem;
+     }
+     .main__title{
+        font-size: 1.5rem;
+    }
+    .main__subtitle{
+        font-size: 1.5rem;
+    }
+    .grid{
+        width: 100%;
+        height: 73vh;
+        display: grid;
+        grid-template-areas: 
+                               
+                                ". columnOne columnTwo columnThree ."
+                                ". columnOne columnFour columnThree ."                               
+                            ;
+        grid-template-columns:   1fr 19rem 19rem 19rem 1fr;
+        grid-template-rows:      1fr 14rem 14rem 1fr;
+        column-gap: 3rem; ;
+    }
+    .gridUno{
+        grid-area:columnOne;
+       
+    }
+    .gridDos{
+        grid-area: columnTwo;        
+    }
+    .gridTres{
+        grid-area: columnFour;
+    }
+    .gridCuatro{
+        grid-area: columnThree;
+    }
+    .grid_columns{
+     
+        height: 13.5rem;
+        width: 100%;
+        font-size: .8rem;  
+    }
+    .grid__columns__icon{
+        width:4rem ;
+        height:4rem ;
+        left: 12rem;
+      
+    }
+
+
+}
